@@ -19,20 +19,21 @@ import java.time.Duration;
 public class SearchTest {
 	@Test
 	public void search() {
-		System.setProperty("webdriver.chrome.driver", "driver/chromedriver.exe");
+		//change per os
+		System.setProperty("webdriver.chrome.driver", "driver/chromedriver");
 		
 		WebDriver driver = new ChromeDriver();
 		
 		WebDriverWait wait = new WebDriverWait(driver, 10);
 		
 		driver.manage().window().maximize();
-		driver.navigate().to("http://canalesdigitales.expand/frontEnd/login");
+		driver.navigate().to("http://canalesdigitales.expand/");
 		driver.findElement(By.id("login_loginForm_user")).sendKeys("alexis.colman");
 		driver.findElement(By.id("login_loginForm_password")).sendKeys("alexis.colman");
 		driver.findElement(By.id("login_loginForm_enterButton_button")).click();
 		
 		
-		//wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("center_column")));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("main_moduleContent_current_view_active_module_ActivityMonitor_title")));
 		
 
 		//String targetText = driver.findElement(By.className("heading-counter")).getText();
