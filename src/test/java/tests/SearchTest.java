@@ -26,16 +26,17 @@ public class SearchTest {
 		WebDriverWait wait = new WebDriverWait(driver, 10);
 		
 		driver.manage().window().maximize();
-		driver.navigate().to("http://automationpractice.com/index.php");
-		driver.findElement(By.id("search_query_top")).sendKeys("Tennis");
-		driver.findElement(By.name("submit_search")).click();
+		driver.navigate().to("http://canalesdigitales.expand/frontEnd/login");
+		driver.findElement(By.id("login_loginForm_user")).sendKeys("alexis.colman");
+		driver.findElement(By.id("login_loginForm_password")).sendKeys("alexis.colman");
+		driver.findElement(By.id("login_loginForm_enterButton_button")).click();
 		
 		
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("center_column")));
+		//wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("center_column")));
 		
 
-		String targetText = driver.findElement(By.className("heading-counter")).getText();
-		Assert.assertEquals(targetText, "0 results have been found.");
+		//String targetText = driver.findElement(By.className("heading-counter")).getText();
+		//Assert.assertEquals(targetText, "0 results have been found.");
         
 		driver.close();
 		driver.quit();
