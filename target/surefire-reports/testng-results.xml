@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="tests.SearchTest" duration-ms="6335" started-at="2020-01-27T13:34:28 UYT" finished-at="2020-01-27T13:34:35 UYT">
+  <suite name="tests.SearchTest" duration-ms="12193" started-at="2020-01-27T14:20:35 UYT" finished-at="2020-01-27T14:20:47 UYT">
     <groups>
     </groups>
-    <test name="Command line test" duration-ms="6335" started-at="2020-01-27T13:34:28 UYT" finished-at="2020-01-27T13:34:35 UYT">
+    <test name="Command line test" duration-ms="12193" started-at="2020-01-27T14:20:35 UYT" finished-at="2020-01-27T14:20:47 UYT">
       <class name="tests.SearchTest">
-        <test-method status="PASS" signature="search()[pri:0, instance:tests.SearchTest@4667ae56]" name="search" duration-ms="6305" started-at="2020-01-27T13:34:28 UYT" finished-at="2020-01-27T13:34:35 UYT">
+        <test-method status="PASS" signature="search()[pri:0, instance:tests.SearchTest@4667ae56]" name="search" duration-ms="12159" started-at="2020-01-27T14:20:35 UYT" finished-at="2020-01-27T14:20:47 UYT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- search -->

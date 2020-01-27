@@ -13,6 +13,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import Pages.AdminPage;
+import Pages.Discador;
 import Pages.LoginAdmin;
 
 import java.time.Duration;
@@ -39,10 +41,27 @@ public class SearchTest {
 		
 		login.login("alexis.colman", "alexis.colman");
 		
-		
+				
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("main_moduleContent_current_view_active_module_ActivityMonitor_title")));
 		
+		AdminPage adminPage = new AdminPage(driver);
+		
+		adminPage.goToDiscador();
+		
+		Discador discador = new Discador(driver);
+		
+		discador.crearCampana();
 
+		
+		//doooobag
+		try {
+			Thread.sleep(3000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
 		//String targetText = driver.findElement(By.className("heading-counter")).getText();
 		//Assert.assertEquals(targetText, "0 results have been found.");
         
