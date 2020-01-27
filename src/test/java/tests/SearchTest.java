@@ -13,6 +13,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import Pages.LoginAdmin;
+
 import java.time.Duration;
 
 
@@ -28,9 +30,14 @@ public class SearchTest {
 		
 		driver.manage().window().maximize();
 		driver.navigate().to("http://canalesdigitales.expand/");
+		/*
 		driver.findElement(By.id("login_loginForm_user")).sendKeys("alexis.colman");
 		driver.findElement(By.id("login_loginForm_password")).sendKeys("alexis.colman");
 		driver.findElement(By.id("login_loginForm_enterButton_button")).click();
+		*/
+		LoginAdmin login = new LoginAdmin(driver);
+		
+		login.login("alexis.colman", "alexis.colman");
 		
 		
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("main_moduleContent_current_view_active_module_ActivityMonitor_title")));
