@@ -14,6 +14,8 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import Pages.AdminPage;
+import Pages.CrearCampana1;
+import Pages.CrearCampana2;
 import Pages.Discador;
 import Pages.LoginAdmin;
 
@@ -51,7 +53,18 @@ public class SearchTest {
 		Discador discador = new Discador(driver);
 		
 		discador.crearCampana();
-
+		
+		CrearCampana1 crearCampana1 = new CrearCampana1(driver);
+		
+		crearCampana1.crearCampana();
+		
+		CrearCampana2 crearCampana2 = new CrearCampana2(driver, wait);
+		
+		crearCampana2.agregarContactosManuales();
+		crearCampana2.agregarContacto("alexis", "098356565", "algo1", "algo2");
+		crearCampana2.agregarContacto("fernando", "09771217", "otroAlgo1", "otroAlgo2");
+		crearCampana2.finalizar();
+		
 		
 		//doooobag
 		try {
