@@ -49,11 +49,10 @@ public class CrearCampana1 {
 	}
 	
 	public void crearCampana() {
-		driver.findElement(nombre).sendKeys("Capana auto 1");
-		driver.findElement(fechaInicio).sendKeys("Capana auto 1");
+		driver.findElement(nombre).sendKeys("Campana auto 1");
 		
 		((JavascriptExecutor)driver).executeScript("arguments[0].setAttribute(arguments[1], arguments[2]);", 
-				driver.findElement(fechaInicio), "vale", "2020/02/20");
+				driver.findElement(fechaInicio), "value", "2020/02/20");
 		
 		driver.findElement(sinFechaFinal).click();
 		new Select(driver.findElement(tipo)).selectByValue("whatsapp");

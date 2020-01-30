@@ -49,7 +49,7 @@ public class CrearCampana2 {
 	}
 	
 	public void finalizar() {
-		wait.until(ExpectedConditions.elementToBeClickable(agregarContacto));
+		wait.until(ExpectedConditions.elementToBeClickable(finalizar));
 		driver.findElement(finalizar).click();
 	}
 	

@@ -14,6 +14,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import Pages.AdminPage;
+import Pages.CampanaInfo;
 import Pages.CrearCampana1;
 import Pages.CrearCampana2;
 import Pages.Discador;
@@ -64,6 +65,11 @@ public class SearchTest {
 		crearCampana2.agregarContacto("alexis", "098356565", "algo1", "algo2");
 		crearCampana2.agregarContacto("fernando", "09771217", "otroAlgo1", "otroAlgo2");
 		crearCampana2.finalizar();
+		
+		CampanaInfo campanaInfo = new CampanaInfo(driver, wait);
+		campanaInfo.startCampana();
+		
+		adminPage.goToDiscador();
 		
 		
 		//doooobag
