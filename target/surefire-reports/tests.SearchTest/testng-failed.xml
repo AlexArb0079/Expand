@@ -5,7 +5,7 @@
     <classes>
       <class name="tests.SearchTest">
         <methods>
-          <include name="search"/>
+          <include name="editCampana"/>
         </methods>
       </class> <!-- tests.SearchTest -->
     </classes>

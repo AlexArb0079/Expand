@@ -18,4 +18,20 @@ public class Discador {
 	public void crearCampana() {
 		driver.findElement(crearCampana).click();
 	}
+	
+	public void editCampana(String name) {
+		driver.findElement(By.xpath("//span[text()='" + name + "']")).click();
+	}
+	
+	public void editCampana(int orden) {
+		System.out.println(driver.findElement(By.id("main_moduleContent_current_view_active_module_listActiveActive")).findElements(By.xpath("//span[@class='mousePointer']")).get(orden*4).getAttribute("innerText"));
+		driver.findElement(By.id("main_moduleContent_current_view_active_module_listActiveActive")).findElements(By.xpath("//span[@class='mousePointer']")).get(orden*4).click();
+		
+		
+		
+		
+		//System.out.println(driver.findElements(By.xpath("//span[@class='mousePointer']")).get(orden*4).getAttribute("innerText"));
+		//driver.findElements(By.xpath("//span[@class='mousePointer']")).get(orden*4).click();
+	}
+	
 }
